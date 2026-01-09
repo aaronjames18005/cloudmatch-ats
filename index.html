@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>CloudMatch ATS | AI Resume Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: "#020617",
+              surface: "rgba(15, 23, 42, 0.85)",
+              surfaceLight: "rgba(30, 41, 59, 0.5)",
+              primary: "#3B82F6", // Strong Blue
+              primaryDark: "#1E3A8A", // Navy
+              accent: "#06b6d4", // Neon Cyan
+              success: "#10B981", // Soft Green
+              warning: "#F59E0B", // Amber
+              danger: "#EF4444", // Red
+            },
+            borderRadius: {
+              "glass-sm": "0.9rem",
+              "glass": "1.4rem",
+              "glass-lg": "2rem",
+            },
+            boxShadow: {
+              glass: "0 18px 45px rgba(2, 6, 23, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.08)",
+              "glass-soft": "0 12px 30px rgba(2, 6, 23, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05)",
+              "glow": "0 0 20px rgba(6, 182, 212, 0.15)",
+            },
+            backdropBlur: {
+              xs: "2px",
+              sm: "6px",
+              md: "12px",
+              lg: "18px",
+              xl: "24px",
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out',
+              'slide-up': 'slideUp 0.6s ease-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #020617;
+        color: #f8fafc;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      .glass-panel {
+        background-color: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .glass-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        transition: all 0.25s cubic-bezier(0.21, 0.74, 0.29, 0.99);
+      }
+      
+      .glass-input {
+        background-color: rgba(2, 6, 23, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(4px);
+        transition: all 0.2s ease;
+      }
+      .glass-input:focus {
+        outline: none;
+        border-color: rgba(6, 182, 212, 0.5);
+        box-shadow: 0 0 0 1px rgba(6, 182, 212, 0.2);
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(148, 163, 184, 0.2); 
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(148, 163, 184, 0.4); 
+      }
+
+      .bg-glass-noise {
+         background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "CloudMatch ATS",
+  "description": "A smart resume analyzer simulating a cloud-based architecture. It matches candidate resumes against job descriptions using AI to extract skills, score compatibility, and provide actionable feedback.",
+  "requestFramePermissions": []
+}
